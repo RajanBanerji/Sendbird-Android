@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#CCFFE5"
+		tools:context=".ui.login.LoginActivity">
+
+		<ProgressBar
+			android:id="@+id/progressBar"
+			style="?android:attr/progressBarStyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintEnd_toEndOf="@+id/tiPassword"
+			app:layout_constraintStart_toStartOf="@+id/tiUserName"
+			app:layout_constraintTop_toBottomOf="@+id/tiUserName" />
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/tiUserName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/margin_10"
+			app:layout_constraintBottom_toTopOf="@+id/tiPassword"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			android:nextFocusDown="@id/tiPassword"
+			app:layout_constraintVertical_bias="1">
+
+			<androidx.appcompat.widget.AppCompatEditText
+				android:id="@+id/etUserName"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:ems="10"
+				android:hint="@string/enter_user_name"
+				android:inputType="textPersonName"
+				android:maxLength="24"
+				tools:text="gdghsfhgdsajfhgshjdfshgfjhgfdj" />
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/tiPassword"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintBottom_toTopOf="@+id/bLogin"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent">
+
+			<androidx.appcompat.widget.AppCompatEditText
+				android:id="@+id/etPassword"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/margin_15"
+				android:ems="10"
+				android:hint="@string/enter_password"
+				android:inputType="textPassword"
+				android:maxLength="12"
+				tools:text="gdghsfhgdsajfhgshjdfshgfjhgfdj" />
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/bLogin"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="buttonLogin"
+			android:text="@string/login"
+			android:textColorHint="@android:color/holo_green_dark"
+			android:textColor="@android:color/white"
+			android:backgroundTint="@android:color/holo_green_dark"
+			android:elevation="@dimen/elevation_5"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

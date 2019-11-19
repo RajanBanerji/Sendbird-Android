@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/drawer_layout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/holo_green_dark"
+		android:orientation="vertical">
+
+		<include
+			android:id="@+id/toolbar"
+			layout="@layout/toolbar" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:orientation="vertical">
+
+			<androidx.appcompat.widget.AppCompatButton
+				android:id="@+id/btn_open_chat"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginStart="@dimen/margin_50"
+				android:layout_marginEnd="@dimen/margin_50"
+				android:elevation="@dimen/elevation_5"
+				android:padding="@dimen/margin_20"
+				android:text="Join Open Channel"
+				android:textAlignment="center"
+				android:textSize="@dimen/margin_15"
+				android:textStyle="bold" />
+
+			<androidx.appcompat.widget.AppCompatButton
+				android:id="@+id/btn_group_chat"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginStart="@dimen/margin_50"
+				android:layout_marginTop="@dimen/margin_10"
+				android:layout_marginEnd="@dimen/margin_50"
+				android:elevation="@dimen/elevation_5"
+				android:padding="@dimen/margin_20"
+				android:text="Join Group Channel"
+				android:textAlignment="center"
+				android:textSize="@dimen/margin_15"
+				android:textStyle="bold" />
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<RelativeLayout
+		android:layout_width="@dimen/width_240"
+		android:layout_height="match_parent"
+		android:layout_gravity="start"
+		android:background="@color/drawerBackground"
+		android:choiceMode="singleChoice">
+
+		<include
+			android:id="@+id/leftDrawer"
+			layout="@layout/left_drawer" />
+	</RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
